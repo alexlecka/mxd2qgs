@@ -42,7 +42,7 @@ class mxd2qgs(object):
 
         try:
             self.mxd = arcpy.mapping.MapDocument(mxdfile)
-        except AssertionError as e:
+        except AssertionError, e:
             raise AssertionError('error importing' + mxdfile + ': ' + e.message)
 
         # Create the minidom
@@ -415,7 +415,7 @@ def main():
         handle.write(result)
         handle.close()
 
-    except Exception as e:
+    except Exception, e:
         sys.stderr.write(e.message)
         sys.exit(1)
 
