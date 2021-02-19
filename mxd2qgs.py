@@ -415,7 +415,7 @@ def main():
         handle.write(result)
         handle.close()
 
-    except Exception, e:
+    except Exception as e:
         sys.stderr.write(e.message)
         sys.exit(1)
 
